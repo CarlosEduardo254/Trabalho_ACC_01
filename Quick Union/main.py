@@ -27,7 +27,7 @@ def carregar_dados(caminho_arquivo):
         return None, []
 
 def executar_benchmark():
-    caminho_arquivo = os.path.join("Testes", "mediumUF.txt")
+    caminho_arquivo = os.path.join("TestesProntos", "mediumUF.txt")
     print(f"Carregando dados de {caminho_arquivo}...")
     
     tamanho, conexoes = carregar_dados(caminho_arquivo)

@@ -26,7 +26,7 @@ def carregar_dados(caminho_arquivo):
 def gerar_grafico_amortizado():
     # 1. Navega para a pasta Testes na RAIZ do projeto
     diretorio_atual = os.path.dirname(os.path.abspath(__file__))
-    caminho_arquivo = os.path.join(diretorio_atual, "..", "Testes", "adversarial_10000.txt")
+    caminho_arquivo = os.path.join(diretorio_atual, "..", "Testes", "adversarial_100000.txt")
     
     tamanho, conexoes = carregar_dados(caminho_arquivo)
     if tamanho is None:
