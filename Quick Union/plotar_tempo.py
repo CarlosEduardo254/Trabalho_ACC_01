@@ -58,7 +58,6 @@ def gerar_grafico_tempo():
     print("\nDesenhando o gráfico de tempo...")
     plt.figure(figsize=(10, 6))
     
-    # A mágica acontece aqui: errorbar plota a linha e os "pauzinhos" do desvio padrão
     plt.errorbar(tamanhos, medias, yerr=desvios, fmt='-o', color='blue', 
                  ecolor='red', capsize=5, label='Tempo Médio ± Desvio Padrão')
     

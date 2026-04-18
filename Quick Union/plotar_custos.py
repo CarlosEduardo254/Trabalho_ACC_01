@@ -59,7 +59,7 @@ def gerar_grafico_amortizado():
     plt.plot(eixo_x_conexoes, eixo_y_custo_medio, color='red', label='Custo médio até i', linewidth=2)
 
     # Formatação exigida pelo trabalho
-    plt.title(f'Custo Amortizado - Quick-Union Ponderado (N={tamanho})')
+    plt.title(f'Custo Amortizado - Quick-Union (N={tamanho})')
     plt.xlabel('Número de Conexões Processadas')
     plt.ylabel('Acessos ao vetor id[]')
     plt.legend()

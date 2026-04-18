@@ -23,8 +23,7 @@ def carregar_dados(caminho_arquivo):
         return None, []
 
 def gerar_grafico_tempo():
-    # Tamanhos razoáveis para não travar a máquina (excluindo 500.000 se demorar demais)
-    tamanhos = [10000, 50000, 100000]
+    tamanhos = [10000, 50000, 100000, 500000]
     medias = []
     desvios = []
     

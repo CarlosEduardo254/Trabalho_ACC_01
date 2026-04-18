@@ -58,18 +58,16 @@ def gerar_grafico_tempo():
     print("\nDesenhando o gráfico de tempo...")
     plt.figure(figsize=(10, 6))
     
-    # A mágica acontece aqui: errorbar plota a linha e os "pauzinhos" do desvio padrão
     plt.errorbar(tamanhos, medias, yerr=desvios, fmt='-o', color='blue', 
                  ecolor='red', capsize=5, label='Tempo Médio ± Desvio Padrão')
     
-    # Formatação exigida
     plt.title('Tempo de Execução vs N - Quick-Find')
     plt.xlabel('Quantidade de elementos das instâncias testadas (N)')
     plt.ylabel('Tempo de execução (segundos)')
     plt.legend()
     plt.grid(True, linestyle='--', alpha=0.5)
     
-    nome_imagem = "grafico_tempo_execucao_QU.png"
+    nome_imagem = "grafico_tempo_execucao_QF.png"
     plt.savefig(nome_imagem, dpi=300, bbox_inches="tight")
 if __name__ == "__main__":
     gerar_grafico_tempo()
