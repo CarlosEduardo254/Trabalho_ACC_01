@@ -27,7 +27,6 @@ def carregar_dados(caminho_arquivo):
 
 
 def gerar_grafico_amortizado():
-    # 1. Navega para a pasta Testes na RAIZ do projeto
     diretorio_atual = os.path.dirname(os.path.abspath(__file__))
     caminho_arquivo = os.path.join(
         diretorio_atual, "..", "Testes", "adversarial_500000.txt"
@@ -39,7 +38,6 @@ def gerar_grafico_amortizado():
 
     qup = QuickUnionPonderado(tamanho)
 
-    # Listas para armazenar as coordenadas (X, Y) do gráfico
     eixo_x_conexoes = []
     eixo_y_custo_i = []
     eixo_y_custo_medio = []
@@ -48,7 +46,6 @@ def gerar_grafico_amortizado():
     for i, (p, q) in enumerate(conexoes):
         qup.union(p, q)
 
-        # O eixo X é o número da conexão processada (começando de 1)
         eixo_x_conexoes.append(i + 1)
         eixo_y_custo_i.append(qup.custo_i)
         eixo_y_custo_medio.append(qup.get_custo_medio())
@@ -56,8 +53,6 @@ def gerar_grafico_amortizado():
     print("Desenhando o gráfico...")
     plt.figure(figsize=(10, 6))
 
-    # Custo pontual (Cinza). Usamos scatter (pontos) com transparência (alpha)
-    # para não virar um bloco sólido de cor e esconder a linha vermelha.
     plt.scatter(
         eixo_x_conexoes,
         eixo_y_custo_i,
@@ -67,7 +62,6 @@ def gerar_grafico_amortizado():
         s=2,
     )
 
-    # Custo médio (Vermelho). Usamos plot (linha contínua).
     plt.plot(
         eixo_x_conexoes,
         eixo_y_custo_medio,
@@ -76,14 +70,12 @@ def gerar_grafico_amortizado():
         linewidth=2,
     )
 
-    # Formatação exigida pelo trabalho
     plt.title(f"Custo Amortizado - Quick-Union Ponderado (N={tamanho})")
     plt.xlabel("Número de Conexões Processadas")
     plt.ylabel("Acessos ao vetor id[]")
     plt.legend()
     plt.grid(True, linestyle="--", alpha=0.5)
 
-    # Salva a imagem em alta resolução (300 dpi) na pasta atual
     nome_imagem = f"grafico_amortizado_N{tamanho}.png"
     plt.savefig(nome_imagem, dpi=300, bbox_inches="tight")
     print(f"✓ Sucesso! Gráfico salvo como: {nome_imagem}")

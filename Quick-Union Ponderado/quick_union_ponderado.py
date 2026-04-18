@@ -43,7 +43,6 @@ class QuickUnionPonderado:
             self.total_i += self.custo_i
     
     def get_custo_medio(self):
-        # Calcula o custo amortizado: total_i / i
         if self.conexoes_processadas == 0:
             return 0
         return self.total_i / self.conexoes_processadas

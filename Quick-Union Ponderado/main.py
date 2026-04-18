@@ -43,24 +43,19 @@ def executar_benchmark():
     print("-" * 55)
 
     for i in range(numero_execucoes):
-        # 1. Instancia uma árvore zerada para cada rodada
         qup = QuickUnionPonderado(tamanho)
         
-        # 2. Inicia o cronômetro de alta precisão
         inicio = time.perf_counter()
         
-        # 3. Roda o algoritmo puro (SEM PRINTS!)
         for p, q in conexoes:
             qup.union(p, q)
             
-        # 4. Para o cronômetro
         fim = time.perf_counter()
         
         tempo_decorrido = fim - inicio
         tempos_execucao.append(tempo_decorrido)
         print(f"Rodada {i+1:02d}: {tempo_decorrido:.5f} segundos")
 
-    # 5. Calcula Média e Desvio Padrão automaticamente
     tempo_medio = statistics.mean(tempos_execucao)
     desvio_padrao = statistics.stdev(tempos_execucao)
 

@@ -61,7 +61,6 @@ def gerar_grafico_tempo():
     plt.errorbar(tamanhos, medias, yerr=desvios, fmt='-o', color='blue', 
                  ecolor='red', capsize=5, label='Tempo Médio ± Desvio Padrão')
     
-    # Formatação exigida
     plt.title('Tempo de Execução vs N - Quick-Union')
     plt.xlabel('Quantidade de elementos das instâncias testadas (N)')
     plt.ylabel('Tempo de execução (segundos)')
