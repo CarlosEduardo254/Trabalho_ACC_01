@@ -40,9 +40,12 @@ Para rodar a implementação principal de um algoritmo e verificar seu processam
 *(Nota: Dependendo da configuração do seu sistema (Linux/Windows), pode ser necessário utilizar `python3 main.py`)*
 
 Caso queira mudar a instância de teste, vá para a linha 30 que possui a sintaxe abaixo e mude apenas o nome do arquivo que deseja testar:
-`    caminho_arquivo = os.path.join("TestesProntos", "mediumUF.txt")`
+
+`caminho_arquivo = os.path.join("TestesProntos", "mediumUF.txt")`
+
 Para testar o tinyUF.txt, por exemplo, mude para:
-`    caminho_arquivo = os.path.join("TestesProntos", "tinyUF.txt")`
+
+`caminho_arquivo = os.path.join("TestesProntos", "tinyUF.txt")`
 
 ### 2. Gerando os Gráficos de Análise
 
@@ -57,9 +60,12 @@ Para rodar a análise de **custo amortizado** das operações:
 Os gráficos gerados serão ou salvos como `.png` no respectivo diretório.
 
 O plot do tempo irá plotar todas as instâncias de teste possíveis para o algoritmo, por sua vez o plot do custo irá plotar apenas 1 instância por vez, para mudar a instância da plotagem vá para a linha 27 do arquivo `plotar_custo.py` e modifique apenas o nome do arquivo para o caso adversarial que você deseja, por exemplo:
-`    caminho_arquivo = os.path.join(diretorio_atual, "..", "Testes", "adversarial_500000.txt")`
+
+`caminho_arquivo = os.path.join(diretorio_atual, "..", "Testes", "adversarial_500000.txt")`
+
 Para rodar o com 100 000 elementos:
-`    caminho_arquivo = os.path.join(diretorio_atual, "..", "Testes", "adversarial_100000.txt")`
+
+`caminho_arquivo = os.path.join(diretorio_atual, "..", "Testes", "adversarial_100000.txt")`
 
 ### 3. Gerando Novos Casos de Teste (Opcional)
 
