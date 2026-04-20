@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 from quick_find import QuickFind
 
 def carregar_dados(caminho_arqfivo):
-    """Lê o arqfivo de teste e retorna o N e a lista de conexões."""
     try:
         with open(caminho_arqfivo, "r") as arqfivo:
             linhas = arqfivo.readlines()

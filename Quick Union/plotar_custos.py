@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 from quick_union import QuickUnion
 
 def carregar_dados(caminho_arquivo):
-    """Lê o arquivo de teste e retorna o N e a lista de conexões."""
     try:
         with open(caminho_arquivo, "r") as arquivo:
             linhas = arquivo.readlines()

@@ -1,11 +1,8 @@
 import os
-
 import matplotlib.pyplot as plt
 from quick_union_ponderado import QuickUnionPonderado
 
-
 def carregar_dados(caminho_arquivo):
-    """Lê o arquivo de teste e retorna o N e a lista de conexões."""
     try:
         with open(caminho_arquivo, "r") as arquivo:
             linhas = arquivo.readlines()
@@ -25,12 +22,9 @@ def carregar_dados(caminho_arquivo):
         print(f"Erro ao ler o arquivo: {e}")
         return None, []
 
-
 def gerar_grafico_amortizado():
     diretorio_atual = os.path.dirname(os.path.abspath(__file__))
-    caminho_arquivo = os.path.join(
-        diretorio_atual, "..", "Testes", "adversarial_500000.txt"
-    )
+    caminho_arquivo = os.path.join(diretorio_atual, "..", "Testes", "adversarial_500000.txt")
 
     tamanho, conexoes = carregar_dados(caminho_arquivo)
     if tamanho is None:

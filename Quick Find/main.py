@@ -1,9 +1,7 @@
 import os
 import statistics
 import time
-
 from quick_find import QuickFind
-
 
 def carregar_dados(caminho_arquivo):
     """Lê o arquivo uma única vez e retorna o N e a lista de conexões."""
@@ -27,7 +25,6 @@ def carregar_dados(caminho_arquivo):
     except Exception as e:
         print(f"Erro ao ler o arquivo: {e}")
         return None, []
-
 
 def executar_benchmark():
     caminho_arquivo = os.path.join("TestesProntos", "mediumUF.txt")
